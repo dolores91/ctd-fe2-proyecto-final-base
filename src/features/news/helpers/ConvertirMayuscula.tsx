@@ -1,4 +1,4 @@
-import { INoticias } from "./INoticias";
+import { INoticias } from "../types";
 
 export const toUpperCase: (objeto: INoticias) => string = (objeto) => {
 

@@ -1,4 +1,4 @@
-import { INoticiasNormalizadas } from "./INoticiasNormalizadas";
+import { INoticiasNormalizadas } from "../types";
 import {
   TarjetaNoticia,
   FechaTarjetaNoticia,

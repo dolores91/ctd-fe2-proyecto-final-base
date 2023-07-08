@@ -1,5 +1,5 @@
-import { INoticias } from "./INoticias";
-import { INoticiasNormalizadas } from "./INoticiasNormalizadas";
+import { INoticias } from "../types";
+import { INoticiasNormalizadas } from "../types";
 
 export const NoticiaFinal: (noticia: INoticias, tiempo: number, titulo: string) => INoticiasNormalizadas = (noticia, tiempo, titulo) => {
     return {

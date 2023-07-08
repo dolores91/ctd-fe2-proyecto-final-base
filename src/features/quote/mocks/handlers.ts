@@ -23,7 +23,7 @@ const handlers = [
             return res(
                 ctx.status(200),
                 ctx.json({
-                    result: 'quoteCharacter',
+                    result: quoteCharacter,
                 }),
             )
         }
@@ -31,7 +31,7 @@ const handlers = [
         return res(
             ctx.status(200),
             ctx.json({
-                result: 'quoteRamdon',
+                result: quoteRamdon,
             }),
         )
     }),

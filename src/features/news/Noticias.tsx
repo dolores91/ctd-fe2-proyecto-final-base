@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { SuscribeImage, CloseButton as Close } from "../../assets";
 import { obtenerNoticias } from "./fakeRest";
-import { minutosTranscurridosN } from "./helpers/minutosTranscurridos";
-import { INoticiasNormalizadas } from "./helpers/INoticiasNormalizadas";
-import { toUpperCase } from "./helpers/toUpperCase";
-import { NoticiaFinal } from "./helpers/NoticiaFinal";
-import CardNoticias from "./helpers/CardNoticias";
+import { CalcularMinutosTranscurridos } from "./helpers/CalcularMinutosTranscurridos";
+import { INoticiasNormalizadas } from "./types";
+import { toUpperCase } from "./helpers/ConvertirMayuscula";
+import { NoticiaFinal } from "./helpers/CrearNoticiaFinal";
+import CardNoticias from "./components/CardNoticias";
 import {
   CloseButton,
   TarjetaModal,
@@ -33,7 +33,7 @@ const Noticias = () => {
       const respuesta = await obtenerNoticias();
       const data = respuesta.map((n) => {
         const titulo = toUpperCase(n);
-        const minutosTranscurridos = minutosTranscurridosN(n);
+        const minutosTranscurridos = CalcularMinutosTranscurridos(n);
         return NoticiaFinal(n, minutosTranscurridos, titulo);
       });
 
